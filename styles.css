@@ -6,6 +6,12 @@ body {
     height: 100%;
     min-height: 100vh;
 }
+section{
+    height: 71vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .back-ground-image {
     position: absolute;
@@ -195,13 +201,13 @@ button.submit:hover {
 }
 
 
-@media (min-height: 900px) {
+/* @media (min-height: 900px) {
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
-}
+} */
 
 footer h1 {
     font-family: 'Impact';
