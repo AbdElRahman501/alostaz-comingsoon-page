@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
     <meta name="description" content="coming soon page for the perfect app to find your perfect teacher and track your progress.,
      ALOSTAZ helps you find your perfect teacher, and helps teachers to reaches to more students and track their progress.,
      help parents to find the perfect teacher for their kids and track their progress ">
@@ -20,43 +24,56 @@
     <nav>
         <img class="logo" src="images/logo.svg" alt="">
     </nav>
-    <div class="flex-container">
-        <h1 class="title">WE ARE COOKING SOMETHING YOU WILL LOVE.</h1>
-        <div class="content">
+    <section>
+        <div class="flex-container">
+            <h1 class="title">WE ARE COOKING SOMETHING YOU WILL LOVE.</h1>
+            <div class="content">
 
-            <p>Be the First to Experience It!</p>
-            <p>Join Us by Subscribing with your email or phone below to get exclusive access to the</p>
-            <p class="colord">prefect app to find the perfect teacher to you</p>
-            <p>before anyone else.</p>
-        </div>
+                <p>Be the First to Experience It!</p>
+                <p>Join Us by Subscribing with your email or phone below to get exclusive access to the</p>
+                <p class="colord">prefect app to find the perfect teacher to you</p>
+                <p>before anyone else.</p>
+            </div>
 
-        <form id="subscribe-form" class="flex-container">
-            <div class="flex-container">
-                <div class="switch">
-                    <div id="btn-slider">
+            <form id="subscribe-form" class="flex-container">
+                <div class="flex-container">
+                    <div class="switch">
+                        <div id="btn-slider">
 
+                        </div>
+                        <button id="student" onclick="setSelected('student')" type="button">
+                            student
+                        </button>
+                        <button id="teacher" onclick="setSelected('teacher')" type="button">
+                            teacher
+                        </button>
                     </div>
-                    <button id="student" onclick="setSelected('student')" type="button">
-                        student
-                    </button>
-                    <button id="teacher" onclick="setSelected('teacher')" type="button">
-                        teacher
-                    </button>
                 </div>
-            </div>
 
-            <div class="input-field">
-                <!-- <label for="name">Name:</label> -->
-                <input placeholder="Name:" type="text" id="name" name="name" required>
-            </div>
-            <div class="input-field">
-                <!-- <label for="email">Email Address or Phone Number:</label> -->
-                <input placeholder="Email Address or Phone Number:" type="email" id="email" name="email" required>
-            </div>
-            <div class="flex-container">
-                <button class="submit" type="submit">Join Us</button>
-            </div>
-        </form>
+                <div class="input-field">
+                    <!-- <label for="name">Name:</label> -->
+                    <input placeholder="Name:" type="text" id="name" name="name" required>
+                    <span class="validation-icon"></span>
+                </div>
+                <div class="input-field">
+                    <!-- <label for="email">Email Address or Phone Number:</label> -->
+                    <input placeholder="Email Address or Phone Number:" type="text" id="email-phone" name="email"
+                        required>
+                    <span class="validation-icon"></span>
+                </div>
+                <p id="error-message" class="error-message"></p>
+                <div class="flex-container">
+                    <button class="submit" id="submit-button" type="submit">Join Us</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div id="success-popup" class="success-popup">
+        <div class="success-content">
+            <img src="images/icons8-check-mark-100.png" alt="success">
+            <p>Congratulations! You've successfully subscribed.</p>
+            <button class="submit" id="close-popup-button">Thank you</button>
+        </div>
     </div>
     <footer>
         <div class="flex-container">
@@ -65,32 +82,27 @@
         </div>
         <p>Follow Us To Stay Tuned</p>
         <div class="icons flex-container">
-            <a href="">
+            <a href="https://www.instagram.com/ALOSTAZ.EG" target="_blank">
                 <i class="fa-brands fa-instagram"> </i>
-
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=61550125262562" target="_blank">
                 <i class="fa-brands fa-facebook"> </i>
-
             </a>
-            <a href="">
+            <a href="https://twitter.com/Alostaz_Eg" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
-
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/company/98511360/admin/feed/posts/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
-
             </a>
-            <a href="">
+            <a href="https://www.threads.net/@alostaz.eg" target="_blank">
                 <i class="fa-brands fa-threads"></i>
             </a>
-            <a href="">
+            <a href="https://www.tiktok.com/@alostaz.eg" target="_blank">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
 
         </div>
     </footer>
-
     <script src="app.js"></script>
 </body>
 

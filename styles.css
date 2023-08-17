@@ -185,11 +185,22 @@ button.submit {
     cursor: pointer;
     margin-top: 32px;
     transition: all 0.5s linear;
+    justify-content: center;
+    display: flex;
 
 }
 
 button.submit:hover {
     background: linear-gradient(180deg, #014871 0%, rgb(58 75 67 / 60%) 99.69%);
+}
+
+
+@media (min-height: 900px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 footer h1 {
@@ -254,4 +265,96 @@ footer .flex-container {
     footer h1 {
         font-size: 30px;
     }
+}
+
+/* Add this CSS in your styles.css file */
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #f2f2f2;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add this CSS in your styles.css file */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    width: 100%;
+}
+
+/* Add this CSS in your styles.css file */
+.input-container {
+    position: relative;
+}
+
+.validation-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Add this CSS in your styles.css file */
+.validation-icon::before {
+    content: "\2713";
+    /* Checkmark icon */
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    /* Add animation */
+}
+
+.validation-icon.valid {
+    display: block;
+    /* Add animation */
+}
+/* Add this CSS in your styles.css file */
+.success-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.success-content {
+    background: linear-gradient(90.93deg, rgba(255, 255, 255, 0.12) 0.16%, rgba(255, 255, 255, 0.03) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#close-popup-button{
+    margin: 40px auto 0;
+    font-size: 13px;
+    padding: 16px 40px;
+    width: fit-content;
+    height: fit-content;
 }
