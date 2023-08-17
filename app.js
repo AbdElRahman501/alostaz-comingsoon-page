@@ -171,3 +171,10 @@ function setSelected(userType) {
     console.log("🚀 ~ file: app.js:38 ~ setSelected ~ document.getElementById(userType):", document.getElementById(userType))
 
 }
+function wakeUpServer() {
+    fetch('https://alostaz-server.onrender.com/api', { method: 'GET' })
+        .then(response => response.json())
+        .then(data => console.log(data.message && "Server Is Running"))
+        .catch(error => console.error('Error waking up server:', error));
+}
+wakeUpServer();
