@@ -111,7 +111,7 @@ document.getElementById("subscribe-form").addEventListener("submit", function (e
     submitButton.innerHTML = '<div class="loader"></div>';
 
     // Send data to the API endpoint
-    fetch("http://localhost:3000/api/subscribers/subscribe", {
+    fetch("https://alostaz-server.onrender.com/api/subscribers/subscribe", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
